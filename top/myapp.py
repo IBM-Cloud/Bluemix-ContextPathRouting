@@ -20,11 +20,19 @@ import json
 
 app = Flask(__name__)
 
+APPLICATION_URIS=''
+
+if 'VCAP_APPLICATION' in os.environ:
+    VCAP_APPLICATION = json.loads(os.environ['VCAP_APPLICATION'])
+
+    if 'application_uris' in VCAP_APPLICATION:
+        APPLICATION_URIS = VCAP_APPLICATION['application_uris']
+
 # Serve up index.html when requests come to root
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def catch_all(path):
-    return render_template('index.html', title='Hey, Bluemix User',path=path)
+    return render_template('index.html', title='Hey, Bluemix User',path=path, urls=APPLICATION_URIS)
 
 
 port = os.getenv('PORT', '5000')
