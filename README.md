@@ -41,8 +41,22 @@ To troubleshoot your Bluemix app the main useful source of information is the lo
   ```
   cf logs <application-name> --recent
   ```
+# Links
 
-### License
+link to CLI commands having route/path support
+link to manifest syntax/docs
+
+Push: http://cli.cloudfoundry.org/en-US/cf/push.html
+create-route: http://cli.cloudfoundry.org/en-US/cf/create-route.html
+map-route http://cli.cloudfoundry.org/en-US/cf/map-route.html
+routes http://cli.cloudfoundry.org/en-US/cf/routes.html
+delete-routes
+unmap-routes
+
+
+https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html
+
+# License
 
 [Apache License, Version 2.0](LICENSE)
 
