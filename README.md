@@ -1,8 +1,16 @@
 # Context Path Routing with IBM Bluemix
 
-yup, text goes here
+[Context Path Routing](https://www.cloudfoundry.org/context-path-routing/) was introduced by Cloud Foundry in 2015 with CLI support in 2016. Context Path Routing is routing based not only on domain names (host header) but also the path specified in the URL. This way, multiple apps and services can share the same domain/host name, but are reached under different paths.
 
-# Running the app on Bluemix
+
+# What this sample does
+Two applications (top, lower), reachable under different routes/paths
+one app written in Python, one in Node.js   
+
+each app prints which path was used and whether it is Node/Python
+
+
+# Running this sample on Bluemix
 
 1. Create a Bluemix Account
 
@@ -16,10 +24,8 @@ yup, text goes here
   git clone https://github.com/data-henrik/Bluemix-ContextPathRouting.git
   ```
 
-1. Edit the `manifest.yml` file and change the application `host` to something unique.
-
-  The host you use will determinate your application url initially, e.g. `<host>.mybluemix.net`.
-
+1. Edit the `manifest.yml` file and change the applications `name`s and the `route` entries. The names are needed to identify your applications. The routes tell Bluemix how your application should be reachable.
+  
 
 1. Push the application
 
