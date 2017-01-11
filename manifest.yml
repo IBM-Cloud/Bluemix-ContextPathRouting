@@ -1,0 +1,11 @@
+applications:
+- name: hl-myapp
+  memory: 256M
+  command: python myapp.py
+  routes:
+  - route: hl-myapp.eu.nn42.net
+  path: ./top/
+- name: hl-myapp-node
+  routes:
+  - route: hl-myapp.eu.nn42.net/sub
+  path: ./lower/

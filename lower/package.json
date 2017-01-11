@@ -1,0 +1,15 @@
+{
+	"name": "ContextRoutes",
+	"version": "0.0.1",
+	"description": "A sample app for Bluemix",
+	"dependencies": {
+		"express": "^3.4.7",
+		"cfenv": "^1.0.3",
+		"pug": "^0.1.0",
+		"body-parser": "^1.0.0"
+	},
+	"engines": {
+		"node": "0.10.26"
+	},
+	"repository": {}
+}
