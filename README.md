@@ -34,27 +34,36 @@ each app prints which path was used and whether it is Node/Python
   git clone https://github.com/data-henrik/Bluemix-ContextPathRouting.git
   ```
 
-1. Edit the `manifest.yml` file and change the applications `name`s and the `route` entries. The names are needed to identify your applications. The routes tell Bluemix how your application should be reachable.
+1. Edit the `manifest.yml` file and change the `name` and `route` properties for the two apps. The names are needed to identify your applications. The routes tell Bluemix how your application should be reachable.
   
 
-1. Push the application
+1. Push the applications. This is done for both apps with the same manifest file. The following command takes all information from that file which was edited in the previous step.
 
   ```
   cf push
   ```
   
 # Useful Commands
-Describe some useful commands to manage routes
+There are a couple commands that directly deal with routes. Once your apps have been successfully deployed, check that the routes are correct:
 
+```
 cf routes
+```
+The `routes` command lists all defined routes for the `space` you are working with.
 
-delete-orphaned-routes
+
+If you want to clean up routes that have been defined, but are not used by any app or service anymore, then use the following command:
+```
+cf delete-orphaned-routes
+```
+All the routes without associated app or service are deleted.
+
 
 # Troubleshooting
 
 Here are some tips for resolving errors you may encounter when trying to deploy this sample.
 
-- To troubleshoot your Bluemix app, a useful source of information is the logs. To see them, run:
+- To find out about deployment or runtime errors of your Bluemix app, you can take a look into the error log. The most recent log entries can be obtained like this:
 
     ```
     cf logs <application-name> --recent
@@ -63,21 +72,25 @@ Here are some tips for resolving errors you may encounter when trying to deploy 
 - Make sure that your installed cf CLI is up-to-date. Pushing several apps with a single manifest and
   included route information requires at least [CLI version 6.21](https://github.com/cloudfoundry/cli/releases/tag/v6.21.0).
   
+- If you changed more than just the name and route entries in the manifest then make sure the formatting and indentation is correct.  
+  
   
 # Documentation Links
 
-link to CLI commands having route/path support
-link to manifest syntax/docs
+Links to cf CLI commands used or mentioned in this sample:
+- push: http://cli.cloudfoundry.org/en-US/cf/push.html
+- create-route: http://cli.cloudfoundry.org/en-US/cf/create-route.html
+- map-route: http://cli.cloudfoundry.org/en-US/cf/map-route.html
+- routes: http://cli.cloudfoundry.org/en-US/cf/routes.html
+- delete-routes:http://cli.cloudfoundry.org/en-US/cf/delete-route.html
+- unmap-routes: http://cli.cloudfoundry.org/en-US/cf/unmap-route.html
+- check-route: http://cli.cloudfoundry.org/en-US/cf/check-route.html
+- delete-orphaned-routes http://cli.cloudfoundry.org/en-US/cf/delete-orphaned-routes.html
 
-Push: http://cli.cloudfoundry.org/en-US/cf/push.html
-create-route: http://cli.cloudfoundry.org/en-US/cf/create-route.html
-map-route http://cli.cloudfoundry.org/en-US/cf/map-route.html
-routes http://cli.cloudfoundry.org/en-US/cf/routes.html
-delete-routes
-unmap-routes
-delete-orphaned-routes
+Read the documentation for manifest files:
+- Cloud Foundry: https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html
+- Bluemix: https://console.ng.bluemix.net/docs/manageapps/depapps.html#appmanifest
 
-https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html
 
 # License
 See [LICENSE](LICENSE) for license information.
