@@ -14,11 +14,10 @@ In this sample project we are demonstrating the use of context path routing. Two
 
 
 # What this sample does
-Two applications (top, lower), reachable under different routes/paths
-one app written in Python, one in Node.js   
 
-each app prints which path was used and whether it is Node/Python
+This sample project consists of two small apps. One app, found in the `top` directory, is written in Python using the [Flask](http://flask.pocoo.org/) framework. The other, found in the `lower` directory, is a Node.js app based on the [Express](http://expressjs.com/) framework. Both apps simply render a simple template and return an HTML page. The web page states which programming language was used, which route was defined was that specific app and with what path the app was invoked.
 
+As you may have noticed, both apps share this GitHub repository and there is only a single [manifest](manifest.yml) file. That file defines the properties for both apps. Moreover, in that file `routes` are defined. They state under which addresses the apps are reachable. Demonstrating the concept of *Context Path Routing* the apps share the same host and domain name, i.e., most parts of an URI. Only the subpath (or directory) of the URI differs.
 
 # Running this sample on Bluemix
 
