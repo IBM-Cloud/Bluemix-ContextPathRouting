@@ -77,8 +77,14 @@ delete-orphaned-routes
 
 https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html
 
-# Contact Information
+# License
+See [LICENSE](LICENSE) for license information.
 
+# Contact Information
+If you have found errors or some instructions are not working anymore, then please open an GitHub issue or, better, create a pull request with your desired changes.
+
+You can find more tutorials and sample code at:
+https://ibm-bluemix.github.io/
 
 [cloud_foundry_url]: https://github.com/cloudfoundry/cli
 [bluemix_signup_url]: https://console.ng.bluemix.net/
