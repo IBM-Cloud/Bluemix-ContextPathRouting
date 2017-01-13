@@ -19,6 +19,13 @@ This sample project consists of two small apps. One app, found in the `top` dire
 
 As you may have noticed, both apps share this GitHub repository and there is only a single [manifest](manifest.yml) file. That file defines the properties for both apps. Moreover, in that file `routes` are defined. They state under which addresses the apps are reachable. Demonstrating the concept of *Context Path Routing* the apps share the same host and domain name, i.e., most parts of an URI. Only the subpath (or directory) of the URI differs. The Node.js app utilizes the path `base-url/lower` and `base-url/sub` while the Python app is in charge of the top directory, i.e., the base-url, and all paths not explicitly defined. Thus, visiting `base-url/anotherpath` would be served by the Python app.
 
+Things to do:
+- Try out different path and see which app serves the request.
+- Change the routes in the manifest file, push the apps again and see how the routes are created and bound during the deployment process.
+- List the routes and find out which apps are served by them (see #useful-commands).
+- Delete unused routes (see #useful-commands).
+- ...
+
 # Running this sample on Bluemix
 
 1. Create a Bluemix Account
