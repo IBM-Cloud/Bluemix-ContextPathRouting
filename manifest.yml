@@ -1,11 +1,16 @@
+# This manifest deploys two applications.
+# Both use the same host and domain name as defined
+# by the route property. The first app uses
+# the root path, the second the "sub" path.
 applications:
-- name: hl-myapp
+- name: yourname-myapp
   memory: 256M
   command: python myapp.py
   routes:
-  - route: hl-myapp.mybluemix.net
+  - route: yourname-myapp.mybluemix.net
   path: ./top/
-- name: hl-myapp-node
+# The node.js app starts here  
+- name: yourname-myapp-node
   routes:
-  - route: hl-myapp.mybluemix.net/sub
+  - route: yourname-myapp.mybluemix.net/sub
   path: ./lower/
