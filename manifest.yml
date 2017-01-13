@@ -12,5 +12,6 @@ applications:
 # The node.js app starts here  
 - name: yourname-myapp-node
   routes:
+  - route: yourname-myapp.mybluemix.net/lower
   - route: yourname-myapp.mybluemix.net/sub
   path: ./lower/
