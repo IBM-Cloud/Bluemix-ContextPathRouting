@@ -36,11 +36,18 @@ each app prints which path was used and whether it is Node/Python
 
 # Troubleshooting
 
-To troubleshoot your Bluemix app the main useful source of information is the logs. To see them, run:
+Here are some tips for resolving errors you may encounter when trying to deploy this sample.
 
-  ```
-  cf logs <application-name> --recent
-  ```
+- To troubleshoot your Bluemix app, a useful source of information is the logs. To see them, run:
+
+    ```
+    cf logs <application-name> --recent
+    ```
+
+- Make sure that your installed cf CLI is up-to-date. Pushing several apps with a single manifest and
+  included route information requires at least [CLI version 6.21](https://github.com/cloudfoundry/cli/releases/tag/v6.21.0).
+  
+  
 # Links
 
 link to CLI commands having route/path support
