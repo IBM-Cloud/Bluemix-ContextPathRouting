@@ -1,6 +1,8 @@
 # Context Path Routing with IBM Bluemix
 
-[Context Path Routing](https://www.cloudfoundry.org/context-path-routing/) was introduced by Cloud Foundry in 2015 with CLI support in 2016. Context Path Routing is routing based not only on domain names (host header) but also the path specified in the URL. This way, multiple apps and services can share the same domain/host name, but are reached under different paths.
+[Context Path Routing](https://www.cloudfoundry.org/context-path-routing/) was introduced by Cloud Foundry in 2015 with CLI support in 2016. It allows to serve an app not just from a domain like "example.com", but also from a relative path like "example.com/myapp". This way, multiple apps and services can share the same domain/host name, but are reached under different paths. It facilitates microservices-based application architectures with one or few host/domain names. Having a separate host for each app or service can be avoided now.
+
+In this sample project we are demonstrating the use of context path routing. Two apps, both implemented in a different language, share the same host name. In adddition, the two apps can be deployed with a single command. App details for both are defined in just one manifest file - another feature to simplify management of microservices-based applications.
 
 ## Table of Contents
 * [What this sample does](#what-this-sample-does)
