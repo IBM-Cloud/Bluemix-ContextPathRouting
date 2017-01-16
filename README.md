@@ -26,6 +26,20 @@ Things to do:
 - Delete unused routes (see #useful-commands).
 - ...
 
+![Alt text](https://g.gravizo.com/g?
+  digraph G {
+    aize ="4,4";
+    app1 [shape=box, label="app 1"];
+    app2 [shape=box, label="app 2"];
+    server1 [shape=box, label="myapp.mybluemix.net"];
+    server2 [shape=box, label="myapp.mybluemix.net/lower"];
+    server3 [shape=box, label="myapp.mybluemix.net/sub"];
+    app1 -> server1 [style=bold,label="            served from"];
+    app2 -> server2;
+    app2 -> server3;
+  }
+)
+
 # Running this sample on Bluemix
 
 1. Create a Bluemix Account
