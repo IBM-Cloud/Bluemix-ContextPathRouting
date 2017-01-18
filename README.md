@@ -78,6 +78,15 @@ cf delete-orphaned-routes
 ```
 All the routes without associated app or service are deleted.
 
+To add a new route to an existing application, you first create that route, then map it to the identified application. `myspace` would be the space you are working with. Create it:   
+```
+cf create-route myspace mybluemix.net –hostname host4app –path newpath
+```
+Map it:   
+```
+cf create-route myapp mybluemix.net –hostname host4app –path newpath
+```
+The app `myapp` would now be reachable under `host4app.mybluemix.net/newpath`. To delete the route you can use the `unmap-route` followed by a `delete-route` command. See the documentation links below for the detailed syntax.
 
 # Troubleshooting
 
