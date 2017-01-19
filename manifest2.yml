@@ -1,0 +1,15 @@
+applications:
+- name: python-app
+  memory: 256M
+  command: python myapp.py
+  host: hl-demo-app-python
+  domains:
+  - eu.nn42.net
+  - eu-gb.mybluemix.net
+  path: ./top/
+- name: node-app
+  hosts:
+  - hl-demo-app-node1
+  - hl-demo-app-node2
+  memory: 256M
+  path: ./lower/
