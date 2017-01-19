@@ -4,6 +4,9 @@
 
 In this sample project we are demonstrating the use of context path routing. Two apps, both implemented in a different language, share the same host name. In adddition, the two apps can be deployed with a single command. App details for both are defined in just one manifest file - another feature to simplify management of microservices-based applications.
 
+The project includes a second manifest file, `manifest2.yml`, that shows variations of how to push several apps and specify
+host and domain names.
+
 ## Table of Contents
 * [What this sample does](#what-this-sample-does)
 * [Running this sample on Bluemix](#running-this-sample-on-bluemix)
@@ -24,6 +27,7 @@ Things to do:
 - Change the routes in the manifest file, push the apps again and see how the routes are created and bound during the deployment process.
 - List the routes and find out which apps are served by them (see #useful-commands).
 - Delete unused routes (see #useful-commands).
+- Use the file `manifest2.yml` as input. It uses `domain` and `host` instead of the routes. You can push the apps by specifying the that manifest file: `cf push -f manifest2.yml`.
 - ...
 
 ![Alt text](https://g.gravizo.com/g?
