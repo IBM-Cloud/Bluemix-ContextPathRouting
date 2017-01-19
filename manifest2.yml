@@ -1,15 +1,21 @@
+# Deploys the Python and Node.js apps
+# to different hosts and domains.
+# See the README. Use with:
+# cf push -f manifest2.yml
 applications:
+# Python app
 - name: python-app
   memory: 256M
   command: python myapp.py
-  host: hl-demo-app-python
+  host: yourname-demo-app-python
   domains:
-  - eu.nn42.net
+  - example.com
   - eu-gb.mybluemix.net
   path: ./top/
+# Node.js app  
 - name: node-app
   hosts:
-  - hl-demo-app-node1
-  - hl-demo-app-node2
+  - yourname-demo-app-node1
+  - yourname-demo-app-node2
   memory: 256M
   path: ./lower/
