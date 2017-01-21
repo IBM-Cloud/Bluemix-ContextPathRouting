@@ -7,6 +7,10 @@ In this sample project we are demonstrating the use of context path routing. Two
 The project includes a second manifest file, `manifest2.yml`, that shows variations of how to push several apps and specify
 host and domain names.
 
+The following blog articles mention this sample:
+- Bluemix: Simplified Deployment of Complex Cloud Foundry Apps: http://blog.4loeser.net/2017/01/bluemix-simplified-deployment-of.html
+- Context Path Routing of Apps and Services in Bluemix: http://blog.4loeser.net/2017/01/context-path-routing-of-apps-and.html
+
 ## Table of Contents
 * [What this sample does](#what-this-sample-does)
 * [Running this sample on Bluemix](#running-this-sample-on-bluemix)
@@ -101,6 +105,11 @@ Here are some tips for resolving errors you may encounter when trying to deploy 
     ```
     cf logs <application-name> --recent
     ```
+
+- You can also do the following to get a verbose readout of the push in your terminal:
+  ```
+  CF_TRACE=true cf push yourname-myapp
+  ```
 
 - Make sure that your installed cf CLI is up-to-date. Pushing several apps with a single manifest and
   included route information requires at least [CLI version 6.21](https://github.com/cloudfoundry/cli/releases/tag/v6.21.0).
