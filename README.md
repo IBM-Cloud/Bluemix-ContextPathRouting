@@ -48,6 +48,8 @@ Things to do:
   }
 )
 
+Note that the Bluemix UI currently does not support management of Context Path Routes. They can neither be displayed nor edited. All related actions have to be performed from the command line using the CF CLI.
+
 # Running this sample on Bluemix
 
 1. Create a Bluemix Account
