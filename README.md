@@ -29,8 +29,8 @@ As you may have noticed, both apps share this GitHub repository and there is onl
 Things to do:
 - Try out different path and see which app serves the request.
 - Change the routes in the manifest file, push the apps again and see how the routes are created and bound during the deployment process.
-- List the routes and find out which apps are served by them (see #useful-commands).
-- Delete unused routes (see #useful-commands).
+- List the routes and find out which apps are served by them (see [Useful Commands](#useful-commands)).
+- Delete unused routes (see [Useful Commands](#useful-commands)).
 - Use the file `manifest2.yml` as input. It uses `domain` and `host` instead of the routes. You can push the apps by specifying the that manifest file: `cf push -f manifest2.yml`.
 - ...
 
