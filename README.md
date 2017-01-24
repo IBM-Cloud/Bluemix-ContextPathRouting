@@ -32,6 +32,7 @@ Things to do:
 - List the routes and find out which apps are served by them (see [Useful Commands](#useful-commands)).
 - Delete unused routes (see [Useful Commands](#useful-commands)).
 - Use the file `manifest2.yml` as input. It uses `domain` and `host` instead of the routes. You can push the apps by specifying the that manifest file: `cf push -f manifest2.yml`.
+- [Encrypt your custom domain on Bluemix](https://www.ibm.com/blogs/bluemix/2016/08/securing-custom-domains-lets-encrypt/) as explained in this cool use of Context Path Routing.
 - ...
 
 ![Alt text](https://g.gravizo.com/g?
