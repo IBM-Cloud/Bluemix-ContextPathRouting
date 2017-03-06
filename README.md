@@ -8,6 +8,7 @@ The project includes a second manifest file, `manifest2.yml`, that shows variati
 host and domain names.
 
 The following blog articles mention this sample:
+- Context path routes for your Bluemix Cloud Foundry apps: https://www.ibm.com/blogs/bluemix/2017/01/context-path-routes-hour-bluemix-cloud-foundry-apps/
 - Bluemix: Simplified Deployment of Complex Cloud Foundry Apps: http://blog.4loeser.net/2017/01/bluemix-simplified-deployment-of.html
 - Context Path Routing of Apps and Services in Bluemix: http://blog.4loeser.net/2017/01/context-path-routing-of-apps-and.html
 
