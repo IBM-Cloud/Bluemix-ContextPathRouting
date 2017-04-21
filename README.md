@@ -36,7 +36,11 @@ Things to do:
 - [Encrypt your custom domain on Bluemix](https://www.ibm.com/blogs/bluemix/2016/08/securing-custom-domains-lets-encrypt/) as explained in this cool use of Context Path Routing.
 - ...
 
-![Alt text](https://g.gravizo.com/g?
+![Alt text](https://g.gravizo.com/source/context_path10?https%3A%2F%2Fraw.githubusercontent.com%2FIBM-Bluemix%2FBluemix-ContextPathRouting%2Fmaster%2FREADME.md)
+
+<details> 
+<summary></summary>
+context_path10
   digraph G {
     aize ="4,4";
     app1 [shape=box, label="app 1"];
@@ -48,7 +52,8 @@ Things to do:
     app2 -> server2;
     app2 -> server3;
   }
-)
+context_path10
+</details>
 
 Note that the Bluemix UI currently does not support management of Context Path Routes. They can neither be displayed nor edited. All related actions have to be performed from the command line using the CF CLI.
 
