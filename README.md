@@ -38,7 +38,6 @@ Things to do:
 
 
 ![Context Path Routes](https://g.gravizo.com/source/cpr10?https%3A%2F%2Fraw.githubusercontent.com%2FIBM-Bluemix%2FBluemix-ContextPathRouting%2Fmaster%2FREADME.md)
-
 <details>
 <summary></summary>
 cpr10
